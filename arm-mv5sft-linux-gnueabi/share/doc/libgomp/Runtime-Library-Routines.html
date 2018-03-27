@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+<title>Runtime Library Routines - GNU libgomp</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="GNU libgomp">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Enabling-OpenMP.html#Enabling-OpenMP" title="Enabling OpenMP">
+<link rel="next" href="Environment-Variables.html#Environment-Variables" title="Environment Variables">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+Copyright (C) 2006 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.1 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being ``GNU General Public License'' and ``Funding
+Free Software'', the Front-Cover
+texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+``GNU Free Documentation License''.
+
+(a) The FSF's Front-Cover Text is:
+
+     A GNU Manual
+
+(b) The FSF's Back-Cover Text is:
+
+     You have freedom to copy and modify this GNU Manual, like GNU
+     software.  Copies published by the Free Software Foundation raise
+     funds for GNU development.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="Runtime-Library-Routines"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Environment-Variables.html#Environment-Variables">Environment Variables</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Enabling-OpenMP.html#Enabling-OpenMP">Enabling OpenMP</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="chapter">2 Runtime Library Routines</h2>
+
+<p>The runtime routines described here are defined by section 3 of the OpenMP
+specifications in version 2.5.
+
+   <p>Control threads, processors and the parallel environment.
+
+<ul class="menu">
+<li><a accesskey="1" href="omp_005fget_005fdynamic.html#omp_005fget_005fdynamic">omp_get_dynamic</a>:           Dynamic teams setting
+<li><a accesskey="2" href="omp_005fget_005fmax_005fthreads.html#omp_005fget_005fmax_005fthreads">omp_get_max_threads</a>:       Maximum number of threads
+<li><a accesskey="3" href="omp_005fget_005fnested.html#omp_005fget_005fnested">omp_get_nested</a>:            Nested parallel regions
+<li><a accesskey="4" href="omp_005fget_005fnum_005fprocs.html#omp_005fget_005fnum_005fprocs">omp_get_num_procs</a>:         Number of processors online
+<li><a accesskey="5" href="omp_005fget_005fnum_005fthreads.html#omp_005fget_005fnum_005fthreads">omp_get_num_threads</a>:       Size of the active team
+<li><a accesskey="6" href="omp_005fget_005fthread_005fnum.html#omp_005fget_005fthread_005fnum">omp_get_thread_num</a>:        Current thread ID
+<li><a accesskey="7" href="omp_005fin_005fparallel.html#omp_005fin_005fparallel">omp_in_parallel</a>:           Whether a parallel region is active
+<li><a accesskey="8" href="omp_005fset_005fdynamic.html#omp_005fset_005fdynamic">omp_set_dynamic</a>:           Enable/disable dynamic teams
+<li><a accesskey="9" href="omp_005fset_005fnested.html#omp_005fset_005fnested">omp_set_nested</a>:            Enable/disable nested parallel regions
+<li><a href="omp_005fset_005fnum_005fthreads.html#omp_005fset_005fnum_005fthreads">omp_set_num_threads</a>:       Set upper team size limit
+</ul>
+
+   <p>Initialize, set, test, unset and destroy simple and nested locks.
+
+<ul class="menu">
+<li><a accesskey="1" href="omp_005finit_005flock.html#omp_005finit_005flock">omp_init_lock</a>:             Initialize simple lock
+<li><a accesskey="2" href="omp_005fset_005flock.html#omp_005fset_005flock">omp_set_lock</a>:              Wait for and set simple lock
+<li><a accesskey="3" href="omp_005ftest_005flock.html#omp_005ftest_005flock">omp_test_lock</a>:             Test and set simple lock if available
+<li><a accesskey="4" href="omp_005funset_005flock.html#omp_005funset_005flock">omp_unset_lock</a>:            Unset simple lock
+<li><a accesskey="5" href="omp_005fdestroy_005flock.html#omp_005fdestroy_005flock">omp_destroy_lock</a>:          Destroy simple lock
+<li><a accesskey="6" href="omp_005finit_005fnest_005flock.html#omp_005finit_005fnest_005flock">omp_init_nest_lock</a>:        Initialize nested lock
+<li><a accesskey="7" href="omp_005fset_005fnest_005flock.html#omp_005fset_005fnest_005flock">omp_set_nest_lock</a>:         Wait for and set simple lock
+<li><a accesskey="8" href="omp_005ftest_005fnest_005flock.html#omp_005ftest_005fnest_005flock">omp_test_nest_lock</a>:        Test and set nested lock if available
+<li><a accesskey="9" href="omp_005funset_005fnest_005flock.html#omp_005funset_005fnest_005flock">omp_unset_nest_lock</a>:       Unset nested lock
+<li><a href="omp_005fdestroy_005fnest_005flock.html#omp_005fdestroy_005fnest_005flock">omp_destroy_nest_lock</a>:     Destroy nested lock
+</ul>
+
+   <p>Portable, thread-based, wall clock timer.
+
+<ul class="menu">
+<li><a accesskey="1" href="omp_005fget_005fwtick.html#omp_005fget_005fwtick">omp_get_wtick</a>:             Get timer precision. 
+<li><a accesskey="2" href="omp_005fget_005fwtime.html#omp_005fget_005fwtime">omp_get_wtime</a>:             Elapsed wall clock time. 
+</ul>
+
+   </body></html>
+

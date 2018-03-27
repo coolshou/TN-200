@@ -1,0 +1,14 @@
+if ARCH_FEROCEON_KW
+
+choice
+	prompt "Feroceon-KW SoC type"
+	default MV88F6281
+
+config  MV88F6281
+	bool "Kirkwood family SoC"
+	---help---
+	Choosing this option will generate a linux kernel for the 88F6282/88F6281/88F6192/88F6190/88F6180/88F6701/88F6702 SoC
+
+endchoice
+
+endif

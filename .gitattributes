@@ -1,0 +1,2 @@
+arm-mv5sft-linux-gnueabi/arm-mv5sft-linux-gnueabi/sys-root/lib/libgcj.so.9.0.0 filter=lfs diff=lfs merge=lfs -text
+arm-mv5sft-linux-gnueabi/arm-mv5sft-linux-gnueabi/sys-root/lib/libgcj.a filter=lfs diff=lfs merge=lfs -text

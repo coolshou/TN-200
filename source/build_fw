@@ -1,0 +1,22 @@
+tar zxvf arm-mv5sft-linux-gnueabi.tgz
+
+WORKDIR=$(pwd)
+export WORKDIR
+PATH=${WORKDIR}/arm-mv5sft-linux-gnueabi/bin:$PATH
+export PATH
+CC=arm-mv5sft-linux-gnueabi-gcc
+export CC
+export CROSS_COMPILE=arm-mv5sft-linux-gnueabi-
+CXX=${CROSS_COMPILE}g++
+export CXX
+RANLIB=${CROSS_COMPILE}ranlib
+export RANLIB
+LD=${CROSS_COMPILE}ld
+export LD
+STRIP=${CROSS_COMPILE}strip
+export STRIP
+tar zxvf ramdisk.tgz
+tar zxvf merge.tgz
+cd merge
+./merge
+

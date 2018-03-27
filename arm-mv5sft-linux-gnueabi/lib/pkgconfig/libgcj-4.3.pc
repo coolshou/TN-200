@@ -1,0 +1,10 @@
+prefix=/home/seugene/sdk/targets/arm-mv5sft-linux-gnueabi/cross
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libgcj
+Description: libgcj
+Version: 4.3.2
+Libs: -L${libdir} -lgcj
+Cflags: -I${includedir}
