@@ -1,0 +1,34 @@
+#!/bin/bash
+# Script to mount a JFFS2 image and copy the file system's files to a destination directory.
+#
+# Craig Heffner
+# 27 August 2011
+
+IMG="$1"
+SCRIPT_DIR=$(dirname $0)
+
+if [ "$IMG" == "" ] || [ "$IMG" == "-h" ]
+then
+	echo "Usage: $0 <jffs2 image>"
+	exit 1
+fi
+
+if [ "$(file $IMG | grep little)" == "" ]
+then
+	echo "Converting image to little endian..."
+	jffs2dump -b -e $IMG.le $IMG
+	IMG=$IMG.le
+fi
+
+if [ "$IMG" != "jffs2.img" ]
+then
+	cp "$IMG" jffs2.img
+	DODEL=1
+fi
+
+$SCRIPT_DIR/sunjffs2
+
+if [ "$DODEL" == "1" ]
+then
+	rm -f jffs2.img
+fi
