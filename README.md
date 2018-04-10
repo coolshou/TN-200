@@ -1,8 +1,8 @@
 # TRENDnet TN-200
 
-![TN-200](images/TN-200.jpg =200x)
-![TN-200](images/TN-200_front.jpg =155x)
-![TN-200](images/TN-200_back.jpg =155x)
+![TN-200](images/TN-200.jpg)
+![TN-200](images/TN-200_front.jpg)
+![TN-200](images/TN-200_back.jpg)
 
 # Build:
 ## Setup Toolchain
